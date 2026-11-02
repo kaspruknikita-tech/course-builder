@@ -22,7 +22,7 @@ npx skills add kaspruknikita-tech/course-builder -g -a claude-code
 git clone https://github.com/kaspruknikita-tech/course-builder.git ~/.claude/skills/course-builder
 ```
 
-Или скачай ZIP (зелёная кнопка **Code → Download ZIP**) и распакуй в `~/.claude/skills/course-builder/`. На Windows это `%USERPROFILE%\.claude\skills\course-builder\`. Внутри должен лежать `SKILL.md`.
+Или скачай ZIP (зелёная кнопка **Code → Download ZIP**). Внутри архива папка `course-builder-main`: переименуй её в `course-builder` и положи в `~/.claude/skills/` (на Windows — `%USERPROFILE%\.claude\skills\`). Проверка: файл должен лежать ровно по пути `~/.claude/skills/course-builder/SKILL.md`, без лишней вложенной папки, иначе Claude Code скилл не увидит.
 
 ### 2. Поставь поиск источников (рекомендуется)
 
