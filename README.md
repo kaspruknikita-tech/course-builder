@@ -114,11 +114,11 @@ git clone https://github.com/kaspruknikita-tech/course-builder.git ~/.claude/ski
 
 </details>
 
-Дальше стоит поставить два поисковых сервера. Строго говоря, это не обязательно, но без них Claude будет искать только встроенным поиском и найдёт заметно меньше хороших источников, а ставятся они двумя командами и без всяких ключей:
+Дальше по желанию можно подключить два поисковых сервера, Exa и Firecrawl. Без них курс тоже соберётся на встроенном поиске Claude Code; с ними у Claude появляются ещё два поисковика, а Firecrawl вдобавок умеет читать длинные страницы и PDF, которые встроенное чтение страниц обрезает. Сразу заведи на обоих сервисах бесплатные ключи: без ключа лимит очень маленький (у Exa он у нас закончился после трёх запросов), а на поиск для одного курса уходит 30–40 запросов, так что без ключей поиск сломается посреди сборки. Как получить ключи, написано в разделе [Инструменты](#инструменты); подключаются серверы так, причём команды с ключами лучше выполнять самому в терминале, а не просить об этом Claude:
 
 ```bash
-claude mcp add --scope user --transport http exa https://mcp.exa.ai/mcp
-claude mcp add --scope user --transport http firecrawl https://mcp.firecrawl.dev/v2/mcp
+claude mcp add --scope user --transport http exa https://mcp.exa.ai/mcp --header "x-api-key: ТВОЙ_КЛЮЧ"
+claude mcp add --scope user --transport http firecrawl https://mcp.firecrawl.dev/v2/mcp --header "Authorization: Bearer ТВОЙ_КЛЮЧ"
 ```
 
 После этого перезапусти Claude Code, потому что новые серверы подключаются только при старте.
@@ -171,17 +171,17 @@ claude mcp add --scope user --transport http firecrawl https://mcp.firecrawl.dev
 
 <br>
 
-| Сервер | Что даёт | Установка без ключа |
+| Сервер | Что даёт | Без ключа |
 |---|---|---|
-| встроенные WebSearch и WebFetch | обычный поиск, уже есть в Claude Code | не нужна |
-| [Exa](https://exa.ai/mcp) | хорошо находит первоисточники, исследования, документацию | `claude mcp add --scope user --transport http exa https://mcp.exa.ai/mcp` |
-| [Firecrawl](https://docs.firecrawl.dev/mcp-server) | читает длинные страницы и PDF | `claude mcp add --scope user --transport http firecrawl https://mcp.firecrawl.dev/v2/mcp` |
+| встроенные WebSearch и WebFetch | обычный поиск и чтение страниц, уже есть в Claude Code | ключ не нужен |
+| [Exa](https://exa.ai/mcp) | отдельный поисковик со своим индексом | работает, но лимит кончается за несколько запросов |
+| [Firecrawl](https://docs.firecrawl.dev/mcp-server) | поиск плюс чтение длинных страниц и PDF | работает с небольшим лимитом |
 
-Без ключа у обоих сервисов небольшой лимит, а на поиск источников для одного курса уходит 30–40 запросов, так что где-нибудь посреди сборки Claude может упереться в ошибку. Бесплатный ключ этот лимит заметно поднимает, и получить его можно за пару минут:
+Для курса нужны ключи: на поиск источников уходит 30–40 запросов, а без ключа лимита на это не хватит. Ключи бесплатные, и завести их можно за пару минут:
 
 1. Exa: зарегистрируйся на [exa.ai](https://exa.ai) и создай ключ на [dashboard.exa.ai/api-keys](https://dashboard.exa.ai/api-keys).
 2. Firecrawl: зарегистрируйся на [firecrawl.dev](https://www.firecrawl.dev), ключ лежит в личном кабинете в разделе API Keys.
-3. Переподключи серверы с ключом. Делай это сам в терминале, в чат ключ не вставляй:
+3. Подключи серверы с ключом. Делай это сам в терминале и не вставляй ключ в чат. Если сервер уже был добавлен без ключа, сначала удали его первой командой из пары:
 
    ```bash
    claude mcp remove exa -s user
