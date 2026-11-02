@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
   <title id="title">Два слоя источников</title>
-  <desc id="desc">Канон — как правильно: сверка 5–10 программ даёт хребет курса, первоисточник вместо пересказа, оппонент у каждой главной темы, доверие и пригодность отдельно. Поле — как бывает на самом деле: Reddit, Telegram, Stack Exchange, Hacker News, Хабр, vc.ru; ситуации идут в упражнения и кейс, вопросы — в попытки, споры — в защиту, советы — в кандидаты канона. Уроки стоят на каноне, практика — на поле.</desc>
+  <desc id="desc">Канон, как правильно: сверка 5–10 программ даёт хребет курса, первоисточник вместо пересказа, оппонент у каждой главной темы, доверие и пригодность отдельно. Поле, как бывает на самом деле: Reddit, Telegram, Stack Exchange, Hacker News, Хабр, vc.ru; ситуации идут в упражнения и кейс, вопросы в попытки, споры в защиту, советы в кандидаты канона. Уроки опираются на канон, практика на поле.</desc>
 
   <rect width="1200" height="600" rx="28" fill="#F6F1E7"/>
 
@@ -21,7 +21,7 @@
         <rect x="32" y="227" width="12" height="12" fill="#2B4C7E"/>
         <text x="58" y="240">оппонент у каждой главной темы</text>
         <rect x="32" y="271" width="12" height="12" fill="#2B4C7E"/>
-        <text x="58" y="284">доверие и пригодность — отдельно</text>
+        <text x="58" y="284">доверие и пригодность раздельно</text>
       </g>
     </g>
 
@@ -49,6 +49,6 @@
     <path d="M318 472 C 318 512, 600 500, 600 530" stroke="#2B4C7E" stroke-width="3" fill="none"/>
     <path d="M882 472 C 882 512, 600 500, 600 530" stroke="#D9622B" stroke-width="3" fill="none"/>
     <circle cx="600" cy="532" r="8" fill="#1E1B16"/>
-    <text x="600" y="572" text-anchor="middle" font-size="22" fill="#1E1B16">уроки стоят на <tspan fill="#2B4C7E" font-weight="700">каноне</tspan>, практика — на <tspan fill="#D9622B" font-weight="700">поле</tspan></text>
+    <text x="600" y="572" text-anchor="middle" font-size="22" fill="#1E1B16">уроки опираются на <tspan fill="#2B4C7E" font-weight="700">каноне</tspan>, практика на <tspan fill="#D9622B" font-weight="700">поле</tspan></text>
   </g>
 </svg>
