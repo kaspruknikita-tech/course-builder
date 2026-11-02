@@ -1,0 +1,56 @@
+name: Отзыв о курсе или скилле
+description: Что-то сработало не так, непонятно или неудобно
+title: "<этап>: <что не так одной фразой>"
+labels: [feedback]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что пишешь. В курсе можно просто сказать Claude «отзыв» — он заполнит эту форму сам и вычистит личное.
+        Не вставляй сюда ключи API, содержимое брифа, имена и данные работодателя.
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Этап или команда
+      options:
+        - "0. Старт и инструменты"
+        - "1. Интервью"
+        - "2. Источники: канон"
+        - "2. Источники: поле"
+        - "3. Программа"
+        - "4. Блокнот и старт"
+        - "урок"
+        - "упражнение"
+        - "сдача или защита"
+        - "тест, повтор, прогресс"
+        - "обнови поле, ретро"
+        - "другое"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Что ожидал
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Что получилось
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Как повторить
+      description: Если понятно
+  - type: input
+    id: env
+    attributes:
+      label: Окружение
+      placeholder: "course-builder 1.1, Claude Code, macOS, поиск: exa + firecrawl"
+  - type: input
+    id: topic
+    attributes:
+      label: Тема курса
+      description: Необязательно

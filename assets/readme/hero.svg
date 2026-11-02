@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">course-builder</title>
+  <desc id="desc">Скилл для Claude Code: собирает курс под тебя из канона и живой практики. Две нити источников — ровная линия канона и волнистая линия поля — сходятся в дорожку модулей курса.</desc>
+
+  <rect width="1200" height="420" rx="28" fill="#F6F1E7"/>
+
+  <g id="title-block" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="64" y="96" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" letter-spacing="2" fill="#7A7266">СКИЛЛ ДЛЯ CLAUDE CODE</text>
+    <text x="64" y="170" font-size="64" font-weight="700" fill="#1E1B16">course-builder</text>
+    <text x="64" y="228" font-size="30" fill="#1E1B16">Собирает курс под тебя</text>
+    <text x="64" y="266" font-size="30" fill="#1E1B16">из <tspan fill="#2B4C7E" font-weight="700">канона</tspan> и <tspan fill="#D9622B" font-weight="700">живой практики</tspan></text>
+    <text x="64" y="334" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" fill="#7A7266">интервью → источники → программа → учёба</text>
+  </g>
+
+  <g id="project-proof" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <!-- канон: ровная нить -->
+    <text x="660" y="108" font-size="24" font-weight="700" fill="#2B4C7E">канон</text>
+    <text x="660" y="136" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#2B4C7E">стандарт · первоисточник · оппонент</text>
+    <path d="M660 160 L930 225" stroke="#2B4C7E" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <rect x="716" y="167" width="12" height="12" fill="#2B4C7E" transform="rotate(14 722 173)"/>
+    <rect x="806" y="189" width="12" height="12" fill="#2B4C7E" transform="rotate(14 812 195)"/>
+
+    <!-- поле: живая нить -->
+    <path d="M660 300 C 700 268, 730 330, 772 292 S 850 248, 930 225" stroke="#D9622B" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <circle cx="716" cy="297" r="7" fill="#D9622B"/>
+    <circle cx="812" cy="270" r="7" fill="#D9622B"/>
+    <text x="660" y="346" font-size="24" font-weight="700" fill="#D9622B">поле</text>
+    <text x="660" y="374" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#D9622B">Reddit · Telegram · Хабр · vc.ru</text>
+
+    <!-- курс: дорожка модулей -->
+    <text x="972" y="196" font-size="24" font-weight="700" fill="#1E1B16">курс</text>
+    <line x1="930" y1="225" x2="1136" y2="225" stroke="#1E1B16" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="930" cy="225" r="11" fill="#1E1B16"/>
+    <circle cx="984" cy="225" r="9" fill="#1E1B16"/>
+    <circle cx="1034" cy="225" r="9" fill="#1E1B16"/>
+    <circle cx="1084" cy="225" r="9" fill="#1E1B16"/>
+    <circle cx="1134" cy="225" r="9" fill="#F6F1E7" stroke="#1E1B16" stroke-width="4"/>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#7A7266" text-anchor="middle">
+      <text x="984" y="262">М1</text>
+      <text x="1034" y="262">М2</text>
+      <text x="1084" y="262">М3</text>
+      <text x="1134" y="262">…</text>
+    </g>
+  </g>
+</svg>

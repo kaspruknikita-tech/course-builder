@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Два слоя источников</title>
+  <desc id="desc">Канон — как правильно: сверка 5–10 программ даёт хребет курса, первоисточник вместо пересказа, оппонент у каждой главной темы, доверие и пригодность отдельно. Поле — как бывает на самом деле: Reddit, Telegram, Stack Exchange, Hacker News, Хабр, vc.ru; ситуации идут в упражнения и кейс, вопросы — в попытки, споры — в защиту, советы — в кандидаты канона. Уроки стоят на каноне, практика — на поле.</desc>
+
+  <rect width="1200" height="600" rx="28" fill="#F6F1E7"/>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="56" y="78" font-size="40" font-weight="700" fill="#1E1B16">Два слоя источников</text>
+
+    <!-- Канон -->
+    <g transform="translate(56 112)">
+      <rect width="524" height="360" rx="20" fill="#FFFDF8" stroke="#2B4C7E" stroke-width="2"/>
+      <text x="32" y="56" font-size="28" font-weight="700" fill="#2B4C7E">Канон</text>
+      <text x="32" y="88" font-size="20" fill="#7A7266">как правильно</text>
+      <line x1="32" y1="110" x2="492" y2="110" stroke="#2B4C7E" stroke-width="3"/>
+      <g font-size="21" fill="#1E1B16">
+        <rect x="32" y="139" width="12" height="12" fill="#2B4C7E"/>
+        <text x="58" y="152">сверка 5–10 программ → хребет</text>
+        <rect x="32" y="183" width="12" height="12" fill="#2B4C7E"/>
+        <text x="58" y="196">первоисточник вместо пересказа</text>
+        <rect x="32" y="227" width="12" height="12" fill="#2B4C7E"/>
+        <text x="58" y="240">оппонент у каждой главной темы</text>
+        <rect x="32" y="271" width="12" height="12" fill="#2B4C7E"/>
+        <text x="58" y="284">доверие и пригодность — отдельно</text>
+      </g>
+    </g>
+
+    <!-- Поле -->
+    <g transform="translate(620 112)">
+      <rect width="524" height="360" rx="20" fill="#FFFDF8" stroke="#D9622B" stroke-width="2"/>
+      <text x="32" y="56" font-size="28" font-weight="700" fill="#D9622B">Поле</text>
+      <text x="32" y="88" font-size="20" fill="#7A7266">как бывает на самом деле</text>
+      <path d="M32 110 C 92 94, 132 126, 192 110 S 312 94, 372 110 S 452 122, 492 110" stroke="#D9622B" stroke-width="3" fill="none"/>
+      <text x="32" y="146" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#D9622B">Reddit · Telegram · Stack Exchange</text>
+      <text x="32" y="170" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#D9622B">Hacker News · Хабр · vc.ru · блоги</text>
+      <g font-size="21" fill="#1E1B16">
+        <circle cx="38" cy="207" r="6" fill="#D9622B"/>
+        <text x="58" y="214">ситуации → упражнения и кейс</text>
+        <circle cx="38" cy="243" r="6" fill="#D9622B"/>
+        <text x="58" y="250">вопросы → попытки до теории</text>
+        <circle cx="38" cy="279" r="6" fill="#D9622B"/>
+        <text x="58" y="286">споры → вопросы защиты</text>
+        <circle cx="38" cy="315" r="6" fill="#D9622B"/>
+        <text x="58" y="322" font-size="21">советы → кандидаты в канон</text>
+      </g>
+    </g>
+
+    <!-- схождение -->
+    <path d="M318 472 C 318 512, 600 500, 600 530" stroke="#2B4C7E" stroke-width="3" fill="none"/>
+    <path d="M882 472 C 882 512, 600 500, 600 530" stroke="#D9622B" stroke-width="3" fill="none"/>
+    <circle cx="600" cy="532" r="8" fill="#1E1B16"/>
+    <text x="600" y="572" text-anchor="middle" font-size="22" fill="#1E1B16">уроки стоят на <tspan fill="#2B4C7E" font-weight="700">каноне</tspan>, практика — на <tspan fill="#D9622B" font-weight="700">поле</tspan></text>
+  </g>
+</svg>

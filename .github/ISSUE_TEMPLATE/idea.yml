@@ -1,0 +1,21 @@
+name: Идея
+description: Чего не хватает скиллу
+title: "Идея: <одной фразой>"
+labels: [idea]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую проблему это решит
+      description: Что сейчас неудобно или не получается
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Как это могло бы работать
+  - type: input
+    id: topic
+    attributes:
+      label: На каком курсе всплыло
+      description: Необязательно

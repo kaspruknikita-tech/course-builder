@@ -1,0 +1,36 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+jobs:
+  skill:
+    name: Скилл собран корректно
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Frontmatter, пути, скрипты, сборка папки курса
+        run: python3 .github/scripts/validate_skill.py
+
+  links:
+    name: Ссылки живы
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --accept 200..=299,401,403,405,429
+            --exclude 'mcp\.(exa\.ai|firecrawl\.dev|context7\.com)'
+            --exclude 'github\.com/kaspruknikita-tech/course-builder/(issues/new|releases)'
+            README.md references/*.md
+          fail: true

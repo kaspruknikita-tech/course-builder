@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Как пользоваться
+    url: https://github.com/kaspruknikita-tech/course-builder#быстрый-старт
+    about: Установка, поиск источников, команды курса
