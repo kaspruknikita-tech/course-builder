@@ -17,10 +17,11 @@ TEMPLATES = pathlib.Path(__file__).resolve().parent.parent / "assets" / "templat
 SERVICE_FILES = [
     "build.md", "brief.md", "research.md", "sources.md", "program.md",
     "case.md", "case-hidden.md", "drills.md", "notebook.md",
-    "state.md", "log.md", "queue.md",
+    "state.md", "log.md", "queue.md", "retro.md",
 ]
 ROOT_FILES = {"course-CLAUDE.md": "CLAUDE.md", "course-README.md": "README.md"}
-DIRS = ["_course/keys", "lessons", "work/data", "materials"]
+FIELD_FILES = {"field-sources.md": "sources.md", "field-vocab.txt": "vocab.txt", "field-seeds.md": "seeds.md"}
+DIRS = ["_course/keys", "_course/field/raw", "lessons", "work/data", "materials"]
 
 REGISTRY = pathlib.Path.home() / ".course-builder" / "courses.md"
 REGISTRY_HEADER = (
@@ -70,6 +71,8 @@ def main():
         (course / "_course" / name).write_text(render(name, values), encoding="utf-8")
     for name, target in ROOT_FILES.items():
         (course / target).write_text(render(name, values), encoding="utf-8")
+    for name, target in FIELD_FILES.items():
+        (course / "_course" / "field" / target).write_text(render(name, values), encoding="utf-8")
 
     register(args.title, course, today)
 
