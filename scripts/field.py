@@ -29,6 +29,7 @@ import math
 import re
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -79,7 +80,16 @@ def get(url, timeout=30):
 
 
 def get_json(url, timeout=40):
-    return json.loads(get(url, timeout)[0].decode("utf-8"))
+    try:
+        return json.loads(get(url, timeout)[0].decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        # архив Reddit под нагрузкой отвечает 422 с {"error": "Timeout..."} — это повод повторить, а не сбой
+        if e.code in (422, 429, 503):
+            try:
+                return json.loads(e.read().decode("utf-8")) or {"error": str(e)}
+            except ValueError:
+                return {"error": str(e)}
+        raise
 
 
 def clean(text):
@@ -162,12 +172,12 @@ def reddit(sub, since, pages):
         q = urllib.parse.urlencode({"subreddit": sub, "after": int(since.timestamp()), "before": before,
                                     "limit": 100, "fields": "id,title,selftext,num_comments,score,created_utc"})
         data = None
-        for attempt in range(2):
+        for attempt in range(3):
             res = get_json(f"https://arctic-shift.photon-reddit.com/api/posts/search?{q}", timeout=60)
             if not res.get("error"):
                 data = res.get("data") or []
                 break
-            time.sleep(5)
+            time.sleep(10 * (attempt + 1))
         if data is None:
             raise RuntimeError(f"архив Reddit не ответил: {res.get('error')}")
         for p in data:
